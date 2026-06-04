@@ -1,4 +1,4 @@
-!this is mapi homogeneous mixture used for segregation analysis where I and Br are homogeneously arranged
+#this is mapi homogeneous mixture used for segregation analysis where I and Br are homogeneously arranged
 data_image0
 _chemical_formula_structural       Pb4I4Br4H48Pb8C8I12Br12N8H48Pb8C8I12Br12N8H48Pb8C8I12Br12N8H24Pb4C4I6Br6N4
 _chemical_formula_sum              "Pb32 I46 Br46 H168 C28 N28"
