@@ -1,4 +1,4 @@
-#MAPI iodine near surface segregated structure
+#MAPI iodine near surface segregated structure middle layers kept fixed
 data_image0
 _chemical_formula_structural       Pb4I8H48Pb8C8IBrIBr2IBr2I2BrIBr3IBr2IBr5N8H48Pb8C8I12Br12N8H48Pb8C8I2BrIBr2IBr2I2Br13N8H24Pb4C4I12N4
 _chemical_formula_sum              "Pb32 I46 H168 C28 Br46 N28"
