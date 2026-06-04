@@ -1,4 +1,4 @@
-#MAPI bromice near slab segregated structure middle layers not kept fixed
+#MAPI iodine near surface segregated structure middle layers not kept fixed
 data_image0
 _chemical_formula_structural       Pb4I8H48Pb8C8IBrIBrI2BrI3BrIBrI3BrI2BrIBr2IN8H48Pb8C8Br24N8H48Pb8C8BrIBrI2BrI2Br2IBrI2Br2IBr2IBrIBr2N8H24Pb4C4I12N4
 _chemical_formula_sum              "Pb32 I46 H168 C28 Br46 N28"
