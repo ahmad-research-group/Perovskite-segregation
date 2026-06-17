@@ -1,0 +1,19 @@
+&INPUTPP
+ 
+/
+&PLOT
+   nfile=5
+   filepp(1)='VBM_K001_B884',
+   weight(1)=0.2222222,
+   filepp(2)='VBM_K002_B884'
+   weight(2)=0.4444444,
+   filepp(3)='VBM_K003_B884',
+   weight(3)=0.4444444,
+   filepp(4)='VBM_K004_B884'
+   weight(4)=0.4444444,
+   filepp(5)='VBM_K005_B884'
+   weight(5)=0.4444444
+   iflag=3,
+   output_format=6,
+   fileout='VBMcombined-all.cube'
+/
