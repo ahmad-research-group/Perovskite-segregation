@@ -1,0 +1,17 @@
+&INPUTPP
+   prefix='mapislab-sym15Br-Ic',
+   outdir='./relax-test',
+   filplot='VBM',
+   plot_num=7,
+   kpoint(1)=1,
+   kpoint(2)=5,
+   kband=884,
+/
+&PLOT
+   nfile=1,
+   filepp(1)='VBM',
+   weight(1)=1.0,
+   iflag=3,
+   output_format=6,
+   fileout='VBM.cube'
+/
