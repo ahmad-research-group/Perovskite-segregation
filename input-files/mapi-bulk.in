@@ -1,0 +1,74 @@
+&CONTROL
+                       title = 'mapi.relax'
+                 calculation = 'relax'
+                restart_mode = 'from_scratch'
+                      outdir = './relax-test-mapi-unit-cubic'
+                      prefix = 'mapis222-pristine'
+                     disk_io = 'low'
+                   verbosity = 'default'
+               etot_conv_thr = 1.0e-4
+               forc_conv_thr = 1.0e-3
+                       nstep = 400
+                     tstress = .true.
+                     tprnfor = .true.
+!                 max_seconds = 86300
+!            dipfield =  true, tefield =   true
+/
+&SYSTEM
+                        ibrav=0
+                        nat =12 , ntyp = 5
+                     ecutwfc = 80
+!                       nbnd = 138
+                       tot_charge = 0
+                    vdw_corr = 'DFT-D3'
+!                 edir = 3, emaxpos = 0.95, eamp = 0.0, eopreg = 0.05
+!                 nspin = 2, starting_magnetization(4) = 0.25
+!       noncolin = .true., lspinorb = .true., starting_magnetization(4) = 0.
+!       nbnd = 28
+                occupations = 'smearing', smearing = 'gaussian', degauss = 0.002
+/
+&ELECTRONS
+            electron_maxstep = 200
+                    conv_thr = 1.0D-8
+              diago_thr_init = 1e-4
+                 startingpot = 'atomic'
+                 startingwfc = 'atomic+random'
+                 mixing_mode = 'plain'
+                 mixing_beta = 0.3
+                 mixing_ndim = 8
+             diagonalization = 'david'
+/
+&IONS
+                ion_dynamics = 'bfgs'
+/
+
+
+ATOMIC_SPECIES
+C  12.0110000000  C-nc-sr-04_pbe_standard.upf
+Pb  207.2000000000  Pb-nc-sr-04_pbe_stringent.upf
+I   126.9040000000  I-nc-sr-04_pbe_standard.upf
+N  14.0067000000000  N-nc-sr-04_pbe_standard.upf
+H  1.0078400000000  H-nc-sr-04_pbe_standard.upf
+
+
+K_POINTS automatic
+6 6 6 0 0 0
+
+ATOMIC_POSITIONS  crystal
+C  0.902780000000  0.999963000000  0.996335000000
+N  0.136583000000  0.999827000000  0.024878000000
+H  0.864508000000  0.999713000000  0.825735000000
+H  0.837794000000  0.143757000000  0.071928000000
+H  0.837589000000  0.856516000000  0.072383000000
+H  0.207588000000  0.134274000000  0.958134000000
+H  0.207393000000  0.865063000000  0.958497000000
+H  0.182013000000  0.000003000000  0.185353000000
+Pb  0.476171000000  0.500031000000  0.475647000000
+I  0.426803000000  0.499883000000  0.972609000000
+I  0.435860000000  0.000045000000  0.506542000000
+I  0.962898000000  0.500227000000  0.447747000000
+
+CELL_PARAMETERS  angstrom
+6.276000000000  0.000000000000  0.000000000000
+0.000000000000  6.276000000000  0.000000000000
+0.000000000000  0.000000000000  6.276000000000
