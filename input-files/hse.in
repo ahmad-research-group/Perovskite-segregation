@@ -1,0 +1,95 @@
+ &CONTROL
+                       title = 'mapi.cif'
+                 calculation = 'scf'
+                restart_mode = 'from_scratch'
+                      outdir = './relax-test'
+                      prefix = 'mapic222-defect'
+                     disk_io = 'low'
+                   verbosity = 'default'
+               etot_conv_thr = 1.0e-4
+               forc_conv_thr = 1.0e-3
+                       nstep = 400
+                     tstress = .true.
+                     tprnfor = .true.
+!	          max_seconds = 86300
+!            dipfield =  true, tefield =   true		
+/
+&SYSTEM
+                       ibrav = 0
+!		       A=12.311992990000
+                         nat = 24, ntyp = 6
+                     ecutwfc = 80
+		     ecutfock = 80
+                        nbnd = 210
+		       tot_charge = 0
+                    vdw_corr = 'DFT-D3'
+!		  edir = 3, emaxpos = 0.95, eamp = 0.0, eopreg = 0.05
+!		  nspin = 2, starting_magnetization(4) = 0.25
+	input_dft='hse', nqx1 = 3, nqx2 = 3, nqx3 = 3,
+	screening_parameter = 0.106 
+	x_gamma_extrapolation = .true., exxdiv_treatment = 'gygi-baldereschi', exx_fraction = 0.43
+	noncolin = .true., lspinorb = .true., starting_magnetization(4) = 0.		   
+!	nbnd = 28
+!		occupations = 'smearing', smearing = 'gaussian', degauss = 0.002
+!		occupations = 'fixed'
+/
+&ELECTRONS
+            electron_maxstep = 200
+                    conv_thr = 1.0D-8
+              diago_thr_init = 1e-6
+                 startingpot = 'atomic'
+                 startingwfc = 'atomic+random'
+                 mixing_mode = 'plain'
+                 mixing_beta = 0.3
+                 mixing_ndim = 8
+             diagonalization = 'david'
+/
+&IONS
+                ion_dynamics = 'bfgs'
+/
+
+
+
+ATOMIC_SPECIES
+C  12.0110000000  C-nc-fr-04_pbe_standard.upf
+Pb  207.2000000000  Pb-nc-fr-04_pbe_stringent.upf
+I   126.9040000000  I-nc-fr-04_pbe_stringent.upf
+N  14.0067000000000  N-nc-fr-04_pbe_standard.upf
+H  1.0078400000000  H-nc-fr-04_pbe_standard.upf
+Br  79.90400000000  Br-nc-fr-04_pbe_stringent.upf
+
+K_POINTS automatic
+6 6 4 0 0 0
+
+
+
+ATOMIC_POSITIONS  crystal
+C  0.907265391862  0.999990936847  0.498708577490
+N  0.132958752563  0.999878886492  0.009667922328
+H  0.881863894460  0.999770841417  0.411214143412
+H  0.830522508137  0.145302893156  0.025984238574
+H  0.830291221941  0.854992832225  0.026162882546
+H  0.214414752814  0.135538181709  0.488224792104
+H  0.214190302260  0.863841394716  0.488383796256
+H  0.167299908612  0.000002866956  0.091669211225
+Pb  0.479437425872  0.499998984650  0.250442735404
+Br  0.403589844862  0.499932556906  0.490744257651
+I  0.439205426859  0.000008959346  0.259745397292
+I  0.966787531893  0.500067210175  0.230371152750
+C  0.899089349265  0.999967935534  0.989202494206
+N  0.140849409235  0.999816587016  0.520489249186
+H  0.871946604774  0.999771394077  0.901911398098
+H  0.837975315712  0.145402189180  0.534932956032
+H  0.837716561400  0.854883437256  0.535115572962
+H  0.207251226173  0.135690055981  0.977729326193
+H  0.207066480892  0.863714068932  0.977866016917
+H  0.177022995022  -0.000003262088  0.602566250702
+Pb  0.493852652093  0.500033697120  0.731555761143
+I  0.440164526177  0.499899591424  0.987649125622
+Br  0.434489876675  -0.000010434356  0.748834774912
+Br  0.940715825674  0.500116893703  0.716612703297
+
+CELL_PARAMETERS  angstrom
+6.283098044800  -0.000062760000  0.008121143900
+-0.000062760000  6.170669782700  -0.000251040000
+0.016982855700  -0.000508356000  12.357839169200
